@@ -11,6 +11,7 @@ import com.gp.demo.model.Persona;
  
 
 public interface PersonaRepository extends  JpaRepository<Persona,Long>{
+	
 	Persona findByNumDoc(int numeroCedula);	
 	Persona findByEmail(String email);	
 	Persona getByEmail(String email);	

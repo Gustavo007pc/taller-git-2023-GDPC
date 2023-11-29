@@ -21,7 +21,7 @@ public interface PersonaServiceInterface {
 	public void delete(Long id) ;
 	
 	//guarda una lista de personas
-	public List<Persona> saveList(List<Persona> personas) throws ErrorException;;
+	public List<Persona> saveList(List<Persona> personas) throws ErrorException;
 	
 	//void deleteByCedula(int cedula) throws GeneralLP3Exception;
 

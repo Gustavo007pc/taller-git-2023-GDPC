@@ -23,14 +23,11 @@ import com.gp.demo.model.Persona;
 import com.gp.demo.model.dto.LoginDTO;
 
 
- 
- 
-
 @RestController
 @RequestMapping(value="/persona")
 public class PersonaController {
 
-		//se comunica con la implementacion del servicio
+		//se comunica con el servicio
 		
 		@Autowired
 		private PersonaServiceInterface personaService;// = PersonaService.buildInstance();
