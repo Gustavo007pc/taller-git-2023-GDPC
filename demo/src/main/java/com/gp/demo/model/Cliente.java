@@ -5,7 +5,7 @@ import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.PrimaryKeyJoinColumn;
 
-
+		// clase hija de persona
 
 
 /**
@@ -16,7 +16,7 @@ import javax.persistence.PrimaryKeyJoinColumn;
 //@PrimaryKeyJoinColumn(name = "ID") //Este es el campo que secrea en Cliente que seraEL PK  el q relacione con Persona
 
 @Entity
-@PrimaryKeyJoinColumn(name = "personaId")
+@PrimaryKeyJoinColumn(name = "personaId")   			//para relacionar con otras tablas
 public class Cliente extends Persona implements Serializable {
  
 	private static final long serialVersionUID = 1L;
@@ -38,7 +38,7 @@ public class Cliente extends Persona implements Serializable {
 	}
 
 	public Cliente(String ruc) {
-		super();
+		super();											//invoca a la clase padre
 		this.ruc = ruc;
 	}
 

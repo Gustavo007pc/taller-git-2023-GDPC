@@ -1,6 +1,6 @@
 package com.gp.demo.model;
 
-
+// es una tabla intermedia, relaciona la tabla persona co la tabla de roles
 
 
 import javax.persistence.Column;
@@ -10,6 +10,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+
+
 
 @Entity
 public class RolesPersona {

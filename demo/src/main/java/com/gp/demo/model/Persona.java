@@ -2,14 +2,12 @@ package com.gp.demo.model;
 
 import java.io.Serializable;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
-import javax.persistence.Table;
 
 
 
@@ -22,13 +20,15 @@ import javax.persistence.Table;
 
 /*Super Clase que contiene los datos de todas las personas*/
 
-@Entity
+//los arrobas son anotaciones
+ 
+@Entity 							//crea la tabla = entidad
 @Inheritance(strategy=InheritanceType.JOINED)
 public class Persona implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 
-	@Id
+	@Id 										//pk primary key clave unica para la tabla
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 
@@ -54,7 +54,7 @@ public class Persona implements Serializable{
 
 	public Persona(int numDoc, String email, String tipoDoc, String nombre, String apellido, String paisOrigen,
 			String password) {
-		super();
+		super(); //invoca a la clase superior
 		this.numDoc = numDoc;
 		this.email = email;
 		this.tipoDoc = tipoDoc;
